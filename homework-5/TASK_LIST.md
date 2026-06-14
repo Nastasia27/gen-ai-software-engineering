@@ -43,19 +43,19 @@ Each step is atomic. Mark `[x]` as you complete it.
 
 ## Task 2: Filesystem MCP ⭐
 
-- [ ] 2.1 Check whether it already exists: `claude mcp list` (look for `filesystem`).
-- [ ] 2.2 If not — add it with a path to an allowed directory (e.g. `homework-5` itself):
+- [x] 2.1 Check whether it already exists: `claude mcp list` (look for `filesystem`).
+- [x] 2.2 If not — add it with a path to an allowed directory (e.g. `homework-5` itself):
   ```bash
   claude mcp add filesystem -- npx -y @modelcontextprotocol/server-filesystem \
     /Users/anastasiakopiika/Documents/FrontEnd/gen-ai-software-engineering/homework-5
   ```
-- [ ] 2.3 Restart Claude Code, `/mcp` → `filesystem` **connected**.
-- [ ] 2.4 Run the specific request:
+- [x] 2.3 Restart Claude Code, `/mcp` → `filesystem` **connected**.
+- [x] 2.4 Run the specific request:
   > "Using the Filesystem MCP, list all files in the homework-5 directory
   >  and summarize the folder structure."
 
   (alternative: "read the file TASKS.md and give me a 3-line summary")
-- [ ] 2.5 📸 `docs/screenshots/filesystem-mcp-result.png` — request + result.
+- [x] 2.5 📸 `docs/screenshots/filesystem-mcp-result.png` — request + result.
 
 **Example `.mcp.json` entry:**
 ```json
