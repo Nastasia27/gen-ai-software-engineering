@@ -68,33 +68,25 @@ Each step is atomic. Mark `[x]` as you complete it.
 
 ---
 
-## Task 3: Jira **or** Notion MCP ⭐⭐
+## Task 3: Jira MCP ⭐⭐
 
-> Pick ONE system where you have a real project. Both options are below.
+> Connect to a real Jira project (Atlassian).
 
-### Option A — Notion
-- [ ] 3A.1 Create an internal integration: notion.so/my-integrations → copy the token (`ntn_...`).
-- [ ] 3A.2 Grant the integration access to the needed page/database (Share → Connect).
-- [ ] 3A.3 Add the server:
-  ```bash
-  claude mcp add --transport http notion https://mcp.notion.com/mcp
-  ```
-
-### Option B — Jira (Atlassian)
-- [ ] 3B.1 Create an API token: id.atlassian.com → Security → API tokens.
-- [ ] 3B.2 Add the official Atlassian MCP (remote, OAuth in the browser on connect):
+### Jira (Atlassian)
+- [x] 3B.1 Create an API token: id.atlassian.com → Security → API tokens.
+- [x] 3B.2 Add the official Atlassian MCP (remote, OAuth in the browser on connect):
   ```bash
   claude mcp add --transport sse atlassian https://mcp.atlassian.com/v1/sse
   ```
 
 ### Shared steps
-- [ ] 3.4 Restart Claude Code, `/mcp` → server **connected** (complete auth if prompted).
-- [ ] 3.5 Run the **exact request from the assignment**:
+- [x] 3.4 Restart Claude Code, `/mcp` → server **connected** (complete auth if prompted).
+- [x] 3.5 Run the **exact request from the assignment**:
   > "Give me the tickets/pages of the last 5 bugs on a project"
 
   (substitute the name of a real project).
-- [ ] 3.6 ⚠️ Before the screenshot, remove sensitive data — keep only the ticket/page **numbers**.
-- [ ] 3.7 📸 `docs/screenshots/jira-or-notion-mcp-result.png` — request + response (anonymized).
+- [x] 3.6 ⚠️ Before the screenshot, remove sensitive data — keep only the ticket/page **numbers**.
+- [x] 3.7 📸 `docs/screenshots/jira-or-notion-mcp-result.png` — request + response (anonymized).
 
 ---
 
