@@ -19,19 +19,18 @@
 - [x] `specification.md` — 5 секцій (High-Level, Mid-Level 4–5 пунктів, Implementation Notes, Context, Low-Level Tasks по агенту)
 - [x] `agents.md` — розширити банківськими правилами (Decimal, ISO 4217, no-PII-logging, audit-trail)
 - [x] Skill `.claude/commands/write-spec.md` (генерує spec за шаблоном)
-- [ ] 📸 **spec-generated.png** — як skill `/write-spec` створює специфікацію *(для PR; не в обов'язкових 5, але корисно)*
 
 ---
 
 ## Етап 2 — Агент 2: Конвеєр (3+ агенти) + context7
-- [ ] `agents/transaction_validator.py` — поля, додатня сума, ISO 4217 (валить TXN006 `XYZ`)
-- [ ] `agents/fraud_detector.py` — risk score (high-value, нічний час, cross-border)
-- [ ] `agents/settlement_processor.py` — нетто-сума з `ROUND_HALF_UP` (3-й агент)
-- [ ] `integrator.py` — створює `shared/`, читає sample, ганяє агентів по черзі через JSON, збирає `results/`
-- [ ] Використати **context7** під час кодингу (decimal, FastMCP)
-- [ ] `research-notes.md` — ≥2 запити context7 (search + library ID + застосований інсайт)
-- [ ] Прогнати: усі 8 транзакцій з'являються в `shared/results/`
-- [ ] 📸 **pipeline-run.png** — повний вивід терміналу `python integrator.py`
+- [x] `agents/transaction_validator.py` — поля, додатня сума, ISO 4217 (валить TXN006 `XYZ`)
+- [x] `agents/fraud_detector.py` — risk score (high-value, нічний час, cross-border)
+- [x] `agents/settlement_processor.py` — нетто-сума з `ROUND_HALF_UP` (3-й агент)
+- [x] `integrator.py` — створює `shared/`, читає sample, ганяє агентів по черзі через JSON, збирає `results/`
+- [x] Використати **context7** під час кодингу (decimal, FastMCP)
+- [x] `research-notes.md` — ≥2 запити context7 (search + library ID + застосований інсайт)
+- [x] Прогнати: усі 8 транзакцій з'являються в `shared/results/` (6 settled, 1 flagged, 2 rejected)
+- [x] 📸 **pipeline-run.png** — повний вивід терміналу `python integrator.py`
 - [ ] 📸 **mcp-interaction.png (частина 1)** — результат запиту до **context7**
 
 ---

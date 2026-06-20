@@ -95,7 +95,7 @@ own timestamp). Flag high-risk (score >= 70) for manual review; otherwise mark a
 File to CREATE: agents/fraud_detector.py
 Function to CREATE: process_message(message: dict) -> dict
 Details:
-  - Additive rules: +40 amount > 10000, +20 amount > 50000 (stacks), +25 cross-border, +15 off-hours.
+  - Additive rules: +40 amount > 10000, +30 amount > 50000 (stacks -> 70 = high), +25 cross-border, +15 off-hours.
   - Clamp score to 0-100. risk_level: <30 low, 30-69 medium, >=70 high.
   - status: 'flagged' if high else 'approved'; attach risk_score, risk_level, risk_reasons[].
   - Timing read from data/transaction timestamp (parse hour) — no wall-clock calls (keeps tests repeatable).
