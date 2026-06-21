@@ -14,5 +14,8 @@ shared/processing/*.json
 shared/output/*.json
 shared/results/*.json
 
+# Local Claude Code MCP config (mcp.json is the tracked deliverable)
+.mcp.json
+
 # OS
 .DS_Store

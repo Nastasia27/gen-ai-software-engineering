@@ -31,7 +31,7 @@
 - [x] `research-notes.md` — ≥2 запити context7 (search + library ID + застосований інсайт)
 - [x] Прогнати: усі 8 транзакцій з'являються в `shared/results/` (6 settled, 1 flagged, 2 rejected)
 - [x] 📸 **pipeline-run.png** — повний вивід терміналу `python integrator.py`
-- [ ] 📸 **mcp-interaction.png (частина 1)** — результат запиту до **context7**
+- [x] 📸 **mcp-interaction.png (частина 1)** — результат запиту до **context7**
 
 ---
 
@@ -40,16 +40,16 @@
 - [x] `.claude/commands/validate-transactions.md`
 - [x] Coverage-gate hook у `.claude/settings.json` — `pytest --cov`, блокує push при <80% (перевірено: exit 2)
 - [x] Дубль-скрипт `scripts/pre-push` + `scripts/coverage_gate.py` (гейт і поза Claude)
-- [ ] 📸 **skill-run-pipeline.png** — виконання skill `/run-pipeline`
-- [ ] 📸 **hook-trigger.png** — як hook блокує push при coverage < 80%
+- [x] 📸 **skill-run-pipeline.png** — виконання skill `/run-pipeline`
+- [x] 📸 **hook-trigger.png** — як hook блокує push при coverage < 80%
 
 ---
 
 ## Етап 4 — MCP (context7 + кастомний сервер)
-- [ ] `mcp/server.py` (FastMCP): tool `get_transaction_status`, tool `list_pipeline_results`, resource `pipeline://summary`
-- [ ] `mcp.json` — context7 + pipeline-status
-- [ ] Перевірити, що обидва сервери відповідають
-- [ ] 📸 **mcp-interaction.png (частина 2)** — виклик кастомного MCP-tool (напр. `get_transaction_status`)
+- [x] `mcp/server.py` (FastMCP): tool `get_transaction_status`, tool `list_pipeline_results`, resource `pipeline://summary`
+- [x] `mcp.json` — context7 + pipeline-status (pipeline-status через `uv`/py3.12, бо system python = 3.9)
+- [x] Перевірити, що сервер відповідає — перевірено через STDIO-запуск тією ж командою з `mcp.json`
+- [x] 📸 **mcp-interaction.png (частина 2)** — виклик кастомного MCP-tool (напр. `get_transaction_status`)
 
 ---
 
@@ -57,21 +57,21 @@
 - [x] `tests/` — unit на кожен агент + 1 інтеграційний тест конвеєра (61 тест)
 - [x] Ізоляція тестів від реального `shared/` (через `tmp_path`)
 - [x] Coverage ≥ 80% (гейт), ціль ≥ 90% (досягнуто **96.58%**)
-- [ ] `README.md` — **ім'я Anastasia Kopiika**, опис системи, агенти, ASCII-діаграма, tech-stack table
-- [ ] `HOWTORUN.md` — покрокова інструкція setup → demo
-- [ ] 📸 **test-coverage.png** — звіт покриття ≥ 80% (бажано ≥ 90%)
+- [x] `README.md` — **ім'я Anastasia Kopiika**, опис системи, агенти, ASCII-діаграма, tech-stack table
+- [x] `HOWTORUN.md` — покрокова інструкція setup → demo
+- [x] 📸 **test-coverage.png** — звіт покриття ≥ 80% (бажано ≥ 90%)
 
 ---
 
 ## Етап 6 — Сабміт: скриншоти + PR
-- [ ] Усі **5 обов'язкових** скриншотів у `docs/screenshots/`:
-  - [ ] `pipeline-run.png`
-  - [ ] `test-coverage.png`
-  - [ ] `skill-run-pipeline.png`
-  - [ ] `hook-trigger.png`
-  - [ ] `mcp-interaction.png` (context7 + кастомний MCP в одному кадрі/серії)
-- [ ] `PR_DESCRIPTION.md` — ті ж скриншоти вбудовані/залінковані
-- [ ] Фінальна перевірка по **Success Criteria** з `TASKS.md`
+- [x] Усі **5 обов'язкових** скриншотів у `docs/screenshots/`:
+  - [x] `pipeline-run.png`
+  - [x] `test-coverage.png`
+  - [x] `skill-run-pipeline.png`
+  - [x] `hook-trigger.png`
+  - [x] `mcp-interaction.png` (context7 + кастомний MCP в одному кадрі/серії)
+- [x] `PR_DESCRIPTION.md` — ті ж скриншоти вбудовані/залінковані
+- [x] Фінальна перевірка по **Success Criteria** з `TASKS.md`
 
 ---
 
