@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# Pipeline runtime artifacts — keep the dirs (.gitkeep), ignore the messages
+shared/input/*.json
+shared/processing/*.json
+shared/output/*.json
+shared/results/*.json
+
+# Local Claude Code MCP config (mcp.json is the tracked deliverable)
+.mcp.json
+
+# OS
+.DS_Store

@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"]
+    },
+    "pipeline-status": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--python", "3.12",
+        "--with", "fastmcp",
+        "python",
+        "/Users/anastasiakopiika/Documents/FrontEnd/gen-ai-software-engineering/homework-6/mcp/server.py"
+      ]
+    }
+  }
+}
