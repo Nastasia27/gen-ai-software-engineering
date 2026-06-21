@@ -36,10 +36,10 @@
 ---
 
 ## Етап 3 — Агент 3: Skills + Coverage-gate Hook
-- [ ] `.claude/commands/run-pipeline.md`
-- [ ] `.claude/commands/validate-transactions.md`
-- [ ] Coverage-gate hook у `.claude/settings.json` — `pytest --cov`, блокує push при <80%
-- [ ] Дубль-скрипт `.git/hooks/pre-push` (щоб гейт спрацьовував і поза Claude)
+- [x] `.claude/commands/run-pipeline.md`
+- [x] `.claude/commands/validate-transactions.md`
+- [x] Coverage-gate hook у `.claude/settings.json` — `pytest --cov`, блокує push при <80% (перевірено: exit 2)
+- [x] Дубль-скрипт `scripts/pre-push` + `scripts/coverage_gate.py` (гейт і поза Claude)
 - [ ] 📸 **skill-run-pipeline.png** — виконання skill `/run-pipeline`
 - [ ] 📸 **hook-trigger.png** — як hook блокує push при coverage < 80%
 

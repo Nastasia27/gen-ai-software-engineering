@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Git pre-push hook — blocks `git push` when homework-6 test coverage is < 80%.
+#
+# Install (run once from the repo root):
+#   ln -sf ../../homework-6/scripts/pre-push .git/hooks/pre-push
+#   chmod +x homework-6/scripts/pre-push
+#
+# Mirrors the Claude Code hook (scripts/push_coverage_gate.py) so the gate also
+# fires for plain command-line pushes. Both delegate to scripts/coverage_gate.py.
+
+set -euo pipefail
+
+GATE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/coverage_gate.py"
+
+echo "Running coverage gate before push…"
+if ! python3 "$GATE"; then
+  echo "⛔ Push aborted: test coverage is below 80%." >&2
+  exit 1
+fi
