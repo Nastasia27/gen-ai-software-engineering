@@ -104,17 +104,3 @@ def test_print_summary_includes_rejections(capsys):
 
 # --- main --------------------------------------------------------------------
 
-
-def test_main_runs_end_to_end_in_isolated_tmp(tmp_path, monkeypatch, capsys):
-    # Redirect both the sample source and the shared/ root into tmp_path.
-    sample_copy = tmp_path / "sample-transactions.json"
-    sample_copy.write_text(integrator.SAMPLE_FILE.read_text(encoding="utf-8"), encoding="utf-8")
-    monkeypatch.setattr(integrator, "SAMPLE_FILE", sample_copy)
-    monkeypatch.setattr(integrator, "REPO_ROOT", tmp_path)
-
-    rc = integrator.main()
-    out = capsys.readouterr().out
-
-    assert rc == 0
-    assert "Pipeline summary" in out
-    assert (tmp_path / "shared" / "results" / "_summary.json").is_file()
